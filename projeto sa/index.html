@@ -1,68 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MECRO - descubra a palavra</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="img/favic.ico" type="image/x-icon">
-    </head>
-    <body>  
-        <div id="menu" class="container">
-            
-            <h1>MECRO</h1>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECRO - descubra a palavra</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favic.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<main>
+
+    <!----------------- MENU ----------------->
+    <section id="menu" class="container">
+
+        <header>
+            <h1>MECRO</h1>
+        </header>
+
+        <section>
             <p>Modo de jogo</p>
-            <div class="opcoes" id="modo">
+            <nav class="opcoes" id="modo">
                 <button class="opcao ativo">Palavra do dia</button>
                 <button class="opcao">Personalizada</button>
-            </div>
+            </nav>
+        </section>
 
+        <section>
             <p id="textodificul">Dificuldade</p>
-            <div class="opcoes" id="dificuldade">
+            <nav class="opcoes" id="dificuldade">
                 <button class="opcao ativo">Fácil</button>
                 <button class="opcao">Médio</button>
                 <button class="opcao">Difícil</button>
-            </div>
+            </nav>
+        </section>
 
-            <div id="palavraSelecionada" style="display: none;">
-                <p>Digite a palavra secreta</p>
-                <input type="text" id="palavraInput">
-            </div>
+        <section id="palavraSelecionada" style="display: none;">
+            <label for="palavraInput">Digite a palavra secreta</label>
+            <input type="text" id="palavraInput">
+        </section>
 
-            <button class="comecar">Começar</button>
-        </div>
+        <button class="comecar">Começar</button>
 
-            <!--------------------------------- Jogo ------------------------------------------>
-            
-        <div id="jogo" style="display: none;">
-            <button id="voltarMenu">Voltar ao Menu</button>
+    </section>
 
-            <p id="tentativasRestantes">Tentativas: <span id="tentativasRestantes"></span></p>
+    <!--------------- JOGO ----------------->
+    <section id="jogo" style="display: none;">
 
-            <h2>DESCUBRA A PALAVRA</h2>
+        <button id="voltarMenu">Voltar ao Menu</button>
 
+        <p>
+            Tentativas:
+            <span id="tentativasRestantes"></span>
+        </p>
 
-            <div id="palavraExibida"></div>
+        <h2>Descubra a palavra</h2>
 
-            <div>
-                <input type="text" id="letraInput" maxlength="1" placeholder="Digite uma letra">
-                <button id="enviarLetra">Enviar</button>
-            </div>
+        <section id="palavraExibida"></section>
 
-            <p>Letras usadas: <span id="letrasUsadas"></span></p>
+        <form>
+            <label for="letraInput">Digite uma letra</label>
+            <input type="text" id="letraInput" maxlength="1" placeholder="Letra">
+            <button type="button" id="enviarLetra">Enviar</button>
+        </form>
 
-            <p id="mensagemFinal"></p>
+        <p>
+            Letras usadas:
+            <span id="letrasUsadas"></span>
+        </p>
 
-        </div>
+        <p id="mensagemFinal"></p>
 
+    </section>
 
+</main>
 
+<script src="script.js"></script>
 
-
-        <script src="script.js"></script>
-    </body>
+</body>
 </html>
