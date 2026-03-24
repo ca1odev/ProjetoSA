@@ -234,8 +234,6 @@ p {
 }
 #tentativasRestantes{
     position: fixed;
-    top: 110px;
-    left: 80px;
     transition: 0.2s ease;
     padding: 4px;
     
